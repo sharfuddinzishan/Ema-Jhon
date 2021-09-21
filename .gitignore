@@ -1,0 +1,4 @@
+touch .gitignore  //to create a .gitignore if you dont have one
+echo "node_modules/" >> .gitignore //this adds node_modules to gitignore
+cat .gitignore //checks what files you have in your gitignore
+node_modules

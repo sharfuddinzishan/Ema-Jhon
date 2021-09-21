@@ -1,0 +1,41 @@
+#header-container{
+    position: fixed;
+    width: 100%;
+    background-color: thistle;
+}
+#header-container img{
+    height: 80px;
+    display:block;
+    margin: 0 auto;
+}
+nav{
+    font-size: 15px;
+    background-color:black;
+    padding: 10px 0px;
+}
+nav a{
+
+    text-decoration: none;
+    color: ghostwhite;
+    padding:10px 20px;
+}
+nav a:hover{
+    color: indianred;
+    background-color: lightgray;
+}
+.searchField{
+    background-color:rgba(34, 34, 34, 0.856);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchField input{
+    display: block;
+    width: 60%;
+    height: 2rem;
+    margin-right: 10px;
+}
+.searchField span{
+    color: mintcream;
+}

@@ -1,0 +1,46 @@
+.single-product{
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    margin-right: 10px;
+}
+.productName{
+    color: blue;
+    font-weight:500;
+    font-size:15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.product-image img{
+    height: 200px;
+    padding: 5px;
+}
+.product-details{
+    padding: 15px 0px;
+}
+.product-more-info{
+    display: flex;
+    margin-top:10px;
+}
+.more-info-left{
+    width: 40%;
+}
+.more-info-right{
+    width: 60%;
+}
+
+.more-info-right h4{
+    margin-left: 2rem;
+    margin-bottom: 10px;
+}
+.stockMessage{
+    font-size: 11px;
+    font-weight: 500;
+    margin-top:10px;
+}
+.product-description-ul {
+    font-size:12px;
+    color: gray;
+    font-weight: lighter;
+    line-height: 16px;
+    margin-left: 60px;
+}
