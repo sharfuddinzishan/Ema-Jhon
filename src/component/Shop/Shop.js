@@ -14,11 +14,12 @@ const Shop = () => {
     let sliceProducts = fakeData.slice(0, 10);
     let [carts, setCarts] = useState([]);
     useEffect(() => {
-        if (!localStorage.getItem('cart')) {
-            localStorage.setItem('cart', JSON.stringify(carts))
+        let getLS = JSON.parse(localStorage.getItem('cart'));
+        if (!getLS) {
+            localStorage.setItem('cart', JSON.stringify(carts));
         }
         else {
-            setCarts(JSON.parse(localStorage.getItem('cart')))
+            setCarts(getLS);
         }
     }, [])
 
