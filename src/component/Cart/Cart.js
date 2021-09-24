@@ -5,9 +5,9 @@ const Cart = props => {
         let convert = num.toFixed(2);
         return Number(convert);
     };
-    let priceTotal = props.carts.reduce((priceTotal, item) => priceTotal + FixedNum(item.price), 0);
+    let priceTotal = props.carts.reduce((priceTotal, item) => priceTotal + FixedNum(item.price * item.nborder), 0);
     priceTotal = FixedNum(priceTotal);
-    let shippingTotal = props.carts.reduce((shippingTotal, item) => shippingTotal + FixedNum(item.shipping), 0);
+    let shippingTotal = props.carts.reduce((shippingTotal, item) => shippingTotal + FixedNum(item.shipping * item.nborder), 0);
     shippingTotal = FixedNum(shippingTotal)
     let subtotal = FixedNum(priceTotal + shippingTotal);
     let tax = subtotal * .1;
@@ -17,7 +17,7 @@ const Cart = props => {
     return (
         <>
             <h1 className="orderSummary">Order Summary</h1>
-            <p className="order-count">Items ordered: {props.carts.length}</p>
+            <p className="order-count">Items ordered: {props.carts.reduce((orderTotal, item) => orderTotal + item.nborder, 0)}</p>
             <table className="cartTable">
                 <thead>
                     <tr><th></th><th></th><th></th></tr>
@@ -32,7 +32,7 @@ const Cart = props => {
                         <td className="itemInfo">${shippingTotal}</td>
                     </tr>
                     <tr>
-                        <td>Total before tax::</td>
+                        <td>Total before tax:</td>
                         <td className="itemInfo">${subtotal}</td>
                     </tr>
                     <tr>
@@ -47,7 +47,7 @@ const Cart = props => {
                 <tfoot>
                     <tr>
                         <td colSpan="3">
-                            <button className="reviewBtn">
+                            <button className="reviewBtn" onClick={() => props.showOrders()}>
                                 <span>Review Your Order</span>
                             </button>
                         </td>

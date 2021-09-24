@@ -13,8 +13,8 @@ const Header = () => {
         <div id="header-container">
             <img src={logo} alt="" />
             <nav>
-                <a href="/shop">Shop</a>
-                <a href="/review">Order Review</a>
+                <a href="/Shop">Shop</a>
+                <a href="/Orders">Order Review</a>
                 <a href="/inventory">Manage Inventory</a>
             </nav>
             <div className="searchField">
